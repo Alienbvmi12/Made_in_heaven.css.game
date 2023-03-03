@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Comic Neue' rel='stylesheet'>
+    <title>Document</title>
+    <style>
+        :root{
+            --dura : 24000ms;
+            --pause : running;
+        }
+
+        *{
+            font-family: 'Comic Neue';
+        }
+
+        body{
+            background-color : lightblue;
+            margin : 0;
+            height : 200vh;
+            overflow : hidden;
+            animation: bg var(--dura) linear infinite;
+            animation-play-state : var(--pause);
+            filter : grayscale(0);
+        }
+        .body{
+            height : 100vh;
+            width : 100vw;
+        }
+        .container{
+            width : 100px;
+            height : 1900px;
+            display : grid;
+            place-items: center;
+        }
+        .sun{
+            background-color : orange;
+            width : 100px;
+            height : 100px;
+        }
+        .moon{
+            background-color : white;
+            width : 100px;
+            height : 100px;
+        }
+        .round{
+            border-radius : 100%;
+            
+        }
+        .ground{
+            width : 100%;
+            height : 300px;
+            position : fixed;
+            background-image : linear-gradient(rgb(3, 89, 3), rgb(96, 24, 24));
+            margin-top : 45%;
+            z-index : 2;
+            animation: bright var(--dura) linear infinite;
+            animation-play-state : var(--pause);
+        }
+        #sky{
+            animation: example var(--dura) linear infinite;
+            animation-play-state : var(--pause);
+        }
+        @keyframes example{
+            0%{transform : rotate(0deg)}
+            100%{transform : rotate(360deg)}
+        }
+        @keyframes bg{
+            0%{background-color : lightblue}
+            5%{background-color : lightblue}
+            40%{background-color : rgb(10, 10, 49)}
+            50%{background-color : rgb(10, 10, 49)}
+            60%{background-color : rgb(10, 10, 49)}
+            95%{background-color : lightblue}
+            100%{background-color : lightblue}
+        }
+        @keyframes bright{
+            0%{filter : brightness(1)}
+            50%{filter : brightness(0.4)}
+            0%{filter : brightness(1)}
+        }
+
+        /**Kodingan orang**/
+
+        #background-wrap {
+    bottom: 0;
+	left: 0;
+	padding-top: 50px;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: -1;
+}
+
+/* KEYFRAMES */
+
+@-webkit-keyframes animateCloud {
+    0% {
+        margin-left: -1000px;
+    }
+    100% {
+        margin-left: 100%;
+    }
+}
+
+@-moz-keyframes animateCloud {
+    0% {
+        margin-left: -1000px;
+    }
+    100% {
+        margin-left: 100%;
+    }
+}
+
+@keyframes animateCloud {
+    0% {
+        margin-left: -1000px;
+    }
+    100% {
+        margin-left: 100%;
+    }
+}
+
+/* ANIMATIONS */
+
+.x1 {
+
+	animation: animateCloud 35s linear infinite;
+    animation-play-state : var(--pause);
+	
+	-webkit-transform: scale(0.65);
+	-moz-transform: scale(0.65);
+	transform: scale(0.65);
+}
+
+.x2 {
+
+	animation: animateCloud 20s linear infinite;
+    animation-play-state : var(--pause);
+	
+	-webkit-transform: scale(0.3);
+	-moz-transform: scale(0.3);
+	transform: scale(0.3);
+}
+
+.x3 {
+
+	animation: animateCloud 30s linear infinite;
+    animation-play-state : var(--pause);
+	
+	-webkit-transform: scale(0.5);
+	-moz-transform: scale(0.5);
+	transform: scale(0.5);
+}
+
+.x4 {
+
+	animation: animateCloud 18s linear infinite;
+    animation-play-state : var(--pause);
+	
+	-webkit-transform: scale(0.4);
+	-moz-transform: scale(0.4);
+	transform: scale(0.4);
+}
+
+.x5 {
+
+	animation: animateCloud 25s linear infinite;
+    animation-play-state : var(--pause);
+	
+	-webkit-transform: scale(0.55);
+	-moz-transform: scale(0.55);
+	transform: scale(0.55);
+}
+
+/* OBJECTS */
+
+.cloud {
+	background: #fff;
+	background: -moz-linear-gradient(top,  #fff 5%, #f1f1f1 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#fff), color-stop(100%,#f1f1f1));
+	background: -webkit-linear-gradient(top,  #fff 5%,#f1f1f1 100%);
+	background: -o-linear-gradient(top,  #fff 5%,#f1f1f1 100%);
+	background: -ms-linear-gradient(top,  #fff 5%,#f1f1f1 100%);
+	background: linear-gradient(top,  #fff 5%,#f1f1f1 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff', endColorstr='#f1f1f1',GradientType=0 );
+	
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	border-radius: 100px;
+	
+	-webkit-box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
+
+	height: 120px;
+	position: relative;
+	width: 350px;
+}
+
+.cloud:after, .cloud:before {
+    background: #fff;
+	content: '';
+	position: absolute;
+	z-indeX: -1;
+}
+
+.cloud:after {
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	border-radius: 100px;
+
+	height: 100px;
+	left: 50px;
+	top: -50px;
+	width: 100px;
+}
+
+.cloud:before {
+	-webkit-border-radius: 200px;
+	-moz-border-radius: 200px;
+	border-radius: 200px;
+
+	width: 180px;
+	height: 180px;
+	right: 50px;
+	top: -90px;
+}
+
+.butang {
+  position: relative;
+  color: rgba(255, 255, 255, 1);
+  text-decoration: none;
+  background-color: rgba(219, 87, 5, 1);
+  font-weight: 700;
+  font-size: 25px;
+  display: block;
+  padding: 4px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  -webkit-box-shadow: 0px 9px 0px rgba(219, 31, 5, 1), 0px 9px 25px rgba(0, 0, 0, .7);
+  -moz-box-shadow: 0px 9px 0px rgba(219, 31, 5, 1), 0px 9px 25px rgba(0, 0, 0, .7);
+  box-shadow: 0px 9px 0px rgba(219, 31, 5, 1), 0px 9px 25px rgba(0, 0, 0, .7);
+  margin: 50px auto;
+  width: 160px;
+  text-align: center;
+  -webkit-transition: all .1s ease;
+  -moz-transition: all .1s ease;
+  -ms-transition: all .1s ease;
+  -o-transition: all .1s ease;
+  transition: all .1s ease;
+  border : 0 none transparent;
+  cursor : pointer;
+}
+
+.butang:active {
+  -webkit-box-shadow: 0px 3px 0px rgba(219, 31, 5, 1), 0px 3px 6px rgba(0, 0, 0, .9);
+  -moz-box-shadow: 0px 3px 0px rgba(219, 31, 5, 1), 0px 3px 6px rgba(0, 0, 0, .9);
+  box-shadow: 0px 3px 0px rgba(219, 31, 5, 1), 0px 3px 6px rgba(0, 0, 0, .9);
+  position: relative;
+  top: 6px;
+}
+    </style>
+</head>
+<body>  
+        <div style="position : fixed; width : 100%; height : 70vh; display: grid; place-items: center;">
+            <div id="background-wrap" style="margin-top : -100px">
+                <div class="x1">
+                    <div class="cloud"></div>
+                </div>
+            
+                <div class="x2">
+                    <div class="cloud"></div>
+                </div>
+            
+                <div class="x3">
+                    <div class="cloud"></div>
+                </div>
+            
+                <div class="x4">
+                    <div class="cloud"></div>
+                </div>
+            
+                <div class="x5">
+                    <div class="cloud"></div>
+                </div>
+            </div>
+            <div style="width : 50%;">
+            <center>
+                <b style="font-family: 'Comic Neue'; font-size : 70px; color : salmon">Made in heaven</b><br>
+                <sub style="font-size : 20px; color : salmon">Fangame</sub>
+                <button class="butang" onclick="theworld()">The world</button>
+            </center>
+            <input type="range" id="dura" min="1" max="2400000" style="width : 100%; transform : rotate(180deg)" oninput="madeInHeaven()">
+            </div>
+        </div>
+        <div class="ground"></div>
+        <div style="width : 100%; height : 200vh; display : flex; justify-content : center; margin-top : 100px">
+            <div class="container" id="sky">
+                    <div class="sun round">
+
+                    </div>
+                    <div style="height : 1700px;">
+
+                    </div>
+                    <div class="moon round">
+
+                    </div>
+            </div>
+        </div>
+</body>
+<script>
+    document.getElementById("dura").value = "2400000";
+    function madeInHeaven(){
+        let dura = document.getElementById("dura").value/100;
+        document.querySelector(".ground").style.animation = "bright "+dura+"ms linear infinite normal none var(--pause)";
+        document.querySelector("#sky").style.animation = "example "+dura+"ms linear infinite normal none var(--pause)";
+        document.querySelector("body").style.animation = "bg "+dura+"ms linear 0s infinite normal none var(--pause)";
+        document.querySelector(".x1").style.animation = "animateCloud "+dura+"ms linear infinite normal none var(--pause)";
+        document.querySelector(".x2").style.animation = "animateCloud "+dura*2+"ms linear infinite normal none var(--pause)";
+        document.querySelector(".x3").style.animation = "animateCloud "+dura*1.5+"ms linear infinite normal none var(--pause)";
+        document.querySelector(".x4").style.animation = "animateCloud "+dura*0.7+"ms linear infinite normal none var(--pause)";
+        document.querySelector(".x5").style.animation = "animateCloud "+dura*0.9+"ms linear infinite normal none var(--pause)";
+    }
+    function theworld(){
+        document.querySelector(":root").style.setProperty('--pause', 'paused');
+        document.querySelector(":root").style.filter = "grayscale(1)";
+        document.querySelector(".butang").disabled = true;
+        setTimeout(function(){
+            document.querySelector(":root").style.setProperty('--pause', 'running');
+            document.querySelector(":root").style.filter = "grayscale(0)";
+            document.querySelector(".butang").disabled = false;
+        }, 5000);
+    }
+
+    
+</script>
+</html>
